@@ -10,12 +10,6 @@ if (!isset($livrosLidos)) $livrosLidos = [];
   <title>Minha Estante - BookIt</title>
   <link rel="stylesheet" href="css/bookshelf.css">
   <link rel="shortcut icon" href="img/srBiblioRosto.png" type="image/x-icon">
-  <script src="https://www.google.com/books/jsapi.js"></script>
-
-  <!-- Passando os dados do PHP para o JavaScript -->
-  <script>
-    const livrosLidos = <?php echo json_encode($livrosLidos); ?>;
-  </script>
 </head>
 <body>
   <header>
@@ -35,7 +29,14 @@ if (!isset($livrosLidos)) $livrosLidos = [];
   <main>
     <h1>Minha Estante</h1>
     <div id="books-container">
-      <section id="aviso"></section>
+      <section id="aviso">
+        <?php
+          if (empty($ret)) {
+            echo "<p>Nenhum livro encontrado!</p>";
+          }
+        ?>
+      </section>
+      <button>Adicionar livro a estante</button>
     </div>
   </main>
 
@@ -56,7 +57,5 @@ if (!isset($livrosLidos)) $livrosLidos = [];
       <p>&copy; <?= date('Y') ?> BookIt. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <script src="js/bookshelf.js"></script>
 </body>
 </html>

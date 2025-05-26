@@ -1,11 +1,10 @@
-/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
-/* Base */
 body {
   width: 100%;
   min-height: 100vh;
@@ -14,7 +13,6 @@ body {
   color: #3e2f1c;
 }
 
-/* Cabeçalho */
 header {
   background-color: #6b3e2e;
   color: white;
@@ -120,4 +118,20 @@ h1 {
   height: 500px;
   border: 1px solid #ccc;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #A3A380;
+  color: #4B2E2B;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #C2B280;
 }

@@ -105,7 +105,7 @@
 
             $usuarioId = $_SESSION['id'];
             $livrosDAO = new LivrosLidosDAO($this->db);
-            $livrosLidos = $livrosDAO->buscarLivroLidoPorUsuario($usuarioId);
+            $ret = $livrosDAO->buscarLivroLidoPorUsuario($usuarioId);
 
             require_once "Views/bookshelf.php";
         }
