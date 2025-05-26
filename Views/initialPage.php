@@ -23,7 +23,7 @@ $usuarioNome = $_SESSION['nome'] ?? 'Usuário';
         <li><a href="#">Início</a></li>
         <li><a href="bookshelf">Estante de livros</a></li>
         <li><a href="meu_perfil">Perfil</a></li>
-        <li><a href="#">Sair</a></li>
+        <li><a href="logOut">Sair</a></li>
       </ul>
     </nav>
   </header>

@@ -37,5 +37,7 @@
 	$route->post("/dashboard", [BookItController::class, "initialPage"]);
 	$route->get("/bookshelf", [BookItController::class, "mostrarLivrosLidos"]);
 	$route->get("/meu_perfil", [BookItController::class, "perfil"]);
+	$route->get("/logOut", [BookItController::class, "sair"]);
+	$route->get("/logOutAction", [BookItController::class, "sairAction"]);
 
 ?>

@@ -21,7 +21,7 @@ if (!isset($livrosLidos)) $livrosLidos = [];
         <li><a href="dashboard">Início</a></li>
         <li><a href="bookshelf">Minha estante</a></li>
         <li><a href="meu_perfil">Perfil</a></li>
-        <li><a href="#">Sair</a></li>
+        <li><a href="logOut">Sair</a></li>
       </ul>
     </nav>
   </header>

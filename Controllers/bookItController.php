@@ -114,6 +114,14 @@
             require_once "Views/perfil.php";
         }
 
+        public function sair() {
+            require_once "views/logout.php";
+        }
+
+        public function sairAction() {
+            require_once "views/logoutAction.php";
+        }
+
     }
 
 ?>
