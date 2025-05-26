@@ -122,6 +122,36 @@
             require_once "views/logoutAction.php";
         }
 
+        public function atualizarFoto() {
+            session_start(); 
+            
+            if (!isset($_SESSION['id'])) {
+                header("Location: login");
+                exit;
+            }
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['nova_foto'])) {
+                $id = $_SESSION['id'];
+                $foto = $_FILES['nova_foto'];
+                
+                if ($foto['error'] === UPLOAD_ERR_OK) {
+                    $extensao = strtolower(pathinfo($foto['name'], PATHINFO_EXTENSION));
+                    $permitidas = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+                    if (in_array($extensao, $permitidas)) {
+                        $nome_arquivo = 'uploads/perfil_' . $id . '.' . $extensao;
+                        move_uploaded_file($foto['tmp_name'], $nome_arquivo);
+
+                        $usuarioDAO = new UsuariosDAO($this->db);
+                        $usuarioDAO->atualizarFotoPerfil($id, $nome_arquivo);
+
+                        $_SESSION['foto_perfil'] = $nome_arquivo;
+                    }
+                }
+                header("Location: meu_perfil");
+                exit;       
+            } 
+        }
+
     }
 
 ?>

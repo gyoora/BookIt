@@ -43,9 +43,32 @@
                 $this->db = null;
                 echo "Erro ao logar: " . $e->getMessage();
                 die();
+            }      
+        }
+
+        public function atualizarFotoPerfil($id, $caminhoFoto) {
+            $sql = "UPDATE usuarios SET foto_perfil = ? WHERE id = ?";
+            try {
+                $stm = $this->db->prepare($sql);
+                $stm->bindValue(1, $caminhoFoto, PDO::PARAM_STR);
+                $stm->bindValue(2, $id, PDO::PARAM_INT);
+                $stm->execute();
+            } catch (PDOException $e) {
+                echo "Erro ao atualizar foto de perfil: " . $e->getMessage();
+                die();
+            }
+        }    
+        public function buscarPorId($id) {
+            $sql = "SELECT * FROM usuarios WHERE id = ?";
+            try {
+                $stm = $this->db->prepare($sql);
+                $stm->bindValue(1, $id, PDO::PARAM_INT);
+                $stm->execute();
+                return $stm->fetch(PDO::FETCH_OBJ);
+            } catch (PDOException $e) {
+                echo "Erro ao buscar usuário: " . $e->getMessage();
+                die();
             }
         }
     }
-
-
 ?>
