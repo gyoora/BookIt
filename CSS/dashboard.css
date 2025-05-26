@@ -1,0 +1,184 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Lora', serif;
+  background-color: #f9f6ef;
+  color: #3e2f1c;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #6b3e2e;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 200px;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Painel principal */
+.dashboard {
+  padding: 2rem;
+}
+
+/* Seção de boas-vindas */
+.boas-vindas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff7e6;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.boas-vindas h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.biblio {
+  text-align: center;
+}
+
+.biblio img {
+  width: 150px;
+}
+
+.fala {
+  margin-top: 0.5rem;
+  font-style: italic;
+  background-color: #f0e0c2;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Atalhos rápidos */
+.atalhos {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background-color: #fffdf8;
+  border: 1px solid #e0d8c3;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.03);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #6b3e2e;
+}
+
+/* Footer */
+footer {
+  background-color: #6b3e2e;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Lora', serif;
+}
+
+.footer-content {
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo .slogan {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ffe4c4; /* tom claro para contraste */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Mascote */
+.biblio-box {
+  width: 180px;
+  text-align: center;
+  color: #4a2f1f;
+  font-size: 0.9rem;
+}
+
+.biblio-box img {
+  width: 100%;
+  max-width: 160px;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,121 @@
+:root {
+--bg-dark: #4B2E2B;
+--golden: #C2B280;
+--cream: #F6E8D7;
+--sage: #A3A380;
+--deep-blue: #2C3E50;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--deep-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeInUp 1s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--bg-dark);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-form h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--bg-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.login-form label {
+    font-weight: 600;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background-color: var(--cream);
+    border: 1px solid var(--golden);
+    margin-bottom: 0.8rem;
+    transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+    border-color: var(--bg-dark);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: var(--sage);
+    color: var(--bg-dark);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: var(--golden);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: var(--bg-dark);
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #b23a48;
+    font-size: 0.875rem;
+    display: block;
+    font-family: 'Lora', serif;
+}
+  
+input:invalid {
+    border: 1px solid #b23a48;
+}
+  
+
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
